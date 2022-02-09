@@ -1,7 +1,7 @@
 public class Objective7Lab5 {
   public static void main(String[] args) {
     java.util.Scanner scanner = new java.util.Scanner(System.in);
-    int selection;
+
 
     while(true) {
       System.out.println("_____Menu_____");
@@ -10,6 +10,7 @@ public class Objective7Lab5 {
       System.out.println("3: Exit");
       System.out.println();
 
+      int selection;
       selection = scanner.nextInt();
 
       if(selection == 1) {
