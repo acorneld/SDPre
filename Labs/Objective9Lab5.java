@@ -16,26 +16,72 @@ public class Objective9Lab5 {
 
 
   while (keepGoing) {
-
+         printMenu();
          System.out.print("Which would you like to do? ");
          choice = kb.nextInt();
 
-         switch (choice) {
+         switch (choice){
            case 1:
-           double sum = num1 + num2;
+           double sum = findSum(num1, num2);
            System.out.println(sum);
+           break;
 
-  }
+           case 2:
+           double average = findAverage(num1, num2);
+           System.out.println(average);
+           break;
 
-         kb.close();
- }
+           case 3:
+           double tax = calcTax(num1, num2);
+           System.out.println(tax);
+           break;
+
+           case 4:
+           System.out.println("You've chosen to quit.");
+           break;
+
+           default:
+           System.out.println("Invalid entry, Please try again");
+           break;
+
+
 }
 
 
 
+}
+
+           kb.close();
+
+ }
 
 
+ public static void printMenu() {
+   System.out.println();
+   System.out.println("========= MENU =========");
+   System.out.println("|    1. Add Numbers    |");
+   System.out.println("|    2. Find Average   |");
+   System.out.println("|    3. Calculate Tax  |");
+   System.out.println("|    4. Exit           |");
+   System.out.println("|                      |");
+   System.out.println("========================");
+   System.out.println();
+ }
+
+ public static double findSum(double x, double y) {
+   double sum = x + y;
+   return sum;
+ }
+
+ public static double findAverage(double x, double y) {
+   double average = (x + y) /2;
+   return average;
+ }
+
+ public static double calcTax (double x, double y) {
+   double tax = (x + y) * 0.0831;
+   return tax;
 
 
-
+ }
 }
